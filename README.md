@@ -16,6 +16,7 @@ To install Covertree-Code-MT, follow these steps:
   Covertree-Code-MT requires the following dependencies:
 
   - Node.js
+  - Express.js
   - MongoDB
   - Yarn
 
