@@ -2,23 +2,27 @@
 
 Covertree-Code-MT is a backend application to manage data for the employee database. This application retrieves data from MongoDB by creating the RestAPIs. All CRUD operations are allowed.
 
+
 ## Installation
 
-To install Covertree-Code-MT, follow these steps:
+### Dependencies
 
-1. Clone the repository from GitHub.
-2. Install the required dependencies using `yarn install`.
-3. Configure the application by modifying a `config.ts` file with your environment variables. (Specific mongodb connection string, etc.,)
-4. Start the application using `yarn start`.
-
-  ### Dependencies
-
-  Covertree-Code-MT requires the following dependencies:
+  Covertree-Code-MT installation requires the following dependencies:
 
   - Node.js
   - Express.js
   - MongoDB
   - Yarn
+
+To install Covertree-Code-MT, follow these steps:
+
+1. Clone the repository from GitHub.
+2. Install the required dependencies using `yarn install`.
+3. Configure the application by modifying the `config.ts` file with your environment variables. You can modify the specific mongodb connection string to access a different account.
+4. Start the application using `yarn start`. You should now be connected to MongoDB.
+5. Go to postman and get the collection set up by selecting "covertree-code-mt.postman_collection.json" from the repository.
+6. You are now all set to explore the application.
+
 
 ## Usage
 
