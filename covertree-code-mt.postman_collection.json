@@ -1,0 +1,328 @@
+{
+	"info": {
+		"_postman_id": "197b0f1b-ef95-4aae-a2d9-8fd52741da87",
+		"name": "covertree-code-mt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"Carl\",\n    \"lastname\": \"Mark\",\n    \"doj\": \"2000-11-30T18:30:00.000Z\",\n    \"dob\": \"1970-11-11T00:00:00.000Z\",\n    \"salary\": 1500000,\n    \"title\": \"SDE Manager\",\n    \"department\": \"Product Dev\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Employee Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"Anna\",\n    \"lastname\": \"Roger\",\n    \"doj\": \"2020-11-30T18:30:00.000Z\",\n    \"dob\": \"1998-10-10T00:00:00.000Z\",\n    \"salary\": 90000,\n    \"title\": \"Finance Analyst\",\n    \"department\": \"Finance\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employees",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employees (Column filter)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/employee/filter?column=department&value=Management",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"employee",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "column",
+							"value": "department"
+						},
+						{
+							"key": "value",
+							"value": "Management"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employees (Sal filter)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/employee/filter?column=salary&start=1000000&end=5000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"employee",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "column",
+							"value": "salary"
+						},
+						{
+							"key": "start",
+							"value": "1000000"
+						},
+						{
+							"key": "end",
+							"value": "5000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employees Sort by Col",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/employee?sort=salary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"employee"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "salary"
+						},
+						{
+							"key": "sort",
+							"value": "doj",
+							"disabled": true
+						},
+						{
+							"key": "sort",
+							"value": "dob",
+							"disabled": true
+						},
+						{
+							"key": "sort",
+							"value": "firstname",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee based on ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/employee/64216a6751179bd9ace18ec0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"employee",
+						"64216a6751179bd9ace18ec0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee based on ID -ve",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/employee/64216a6751179bd9ace18ec9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"employee",
+						"64216a6751179bd9ace18ec9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee based on ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"Naya\",\n    \"lastname\": \"Rose\",\n    \"doj\": \"1999-01-03T08:00:00.000Z\",\n    \"dob\": \"1975-01-11T00:00:00.000Z\",\n    \"salary\": 8500000,\n    \"title\": \"Founder & CEO\",\n    \"department\": \"Management\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/employee/642169d051179bd9ace18ebe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"employee",
+						"642169d051179bd9ace18ebe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/employee/64216ec45c6dc35b5137442a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"employee",
+						"64216ec45c6dc35b5137442a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
