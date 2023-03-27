@@ -1,2 +1,2 @@
 export const dbConnectionString =
-  "mongodb+srv://tanuja:test123@tanuja.oigz5y9.mongodb.net/employee?retryWrites=true&w=majority";
+  "mongodb+srv://tanujajasti2:GunsandRoses@tanuja.ytivzt5.mongodb.net/employee?retryWrites=true&w=majority";
