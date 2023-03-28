@@ -35,13 +35,13 @@ To use the Rest API, follow these steps:
       Sample request body to add employee:
       ```
        {
-      "firstname": "Florence",
-      "lastname": "Preston",
-      "doj": "2001-10-30T18:30:00.000Z",
-      "dob": "1974-12-11T00:00:00.000Z",
-      "salary": 1700000,
-      "title": "SDE Manager",
-      "department": "Product Dev"
+         "firstname": "Florence",
+         "lastname": "Preston",
+         "doj": "2001-10-30T18:30:00.000Z",
+         "dob": "1974-12-11T00:00:00.000Z",
+         "salary": 1700000,
+         "title": "SDE Manager",
+         "department": "Product Dev"
        }
     - Get employees: http://localhost:8000/employee (GET)
     - Get employees - sorted data: http://localhost:8000/employee?sort=salary (GET) 
@@ -49,4 +49,16 @@ To use the Rest API, follow these steps:
     - Get employees -  salary filter: http://localhost:8000/employee/filter?column=salary&start=1000000&end=5000000 (GET)
     - Get employees  : http://localhost:8000/employee/6421ea078b5e7b1c687f7b33 (GET)
     - Update employee - based on ID: http://localhost:8000/employee/6421ea078b5e7b1c687f7b33 (PUT)
+    
+      Sample request body to update employee:
+      ```
+      {
+        "firstname": "Anna",
+        "lastname": "Ross",
+        "doj": "2020-11-30T18:30:00.000Z",
+        "dob": "1998-10-10T00:00:00.000Z",
+        "salary": 90000,
+        "title": "Finance Analyst",
+        "department": "Finance"
+      }
     - Delete employee - based on ID: http://localhost:8000/employee/6421ea178b5e7b1c687f7b35 (DELETE)
