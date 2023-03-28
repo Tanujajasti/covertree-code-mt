@@ -1,10 +1,19 @@
 import express from "express";
+import { validateNewEmployeeRequest } from "./../utils/validations"
 const employee = require("./../models/employee");
 
 const router = express.Router();
 
 // Create the employee record
 router.post("/employee", async (req: any, res: any) => {
+  try {
+    validateNewEmployeeRequest(req)
+  } catch (e) {
+    return res.json({
+          status: "Failed",
+          message: (e as Error).message
+        });
+  }
   const data = new employee(req.body);
   const result = await data.save();
 
