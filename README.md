@@ -33,7 +33,8 @@ To use the Rest API, follow these steps:
     - Add employee: http://localhost:8000/employee (POST)
  
       Sample request body to add employee:
-      ```{
+      ```
+       {
       "firstname": "Florence",
       "lastname": "Preston",
       "doj": "2001-10-30T18:30:00.000Z",
