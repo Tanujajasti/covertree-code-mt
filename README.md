@@ -20,8 +20,9 @@ To install Covertree-Code-MT, follow these steps:
 2. Install the required dependencies using `yarn install`.
 3. Configure the application by modifying the `config.ts` file with your environment variables. You can modify the specific mongodb connection string to access a different account.
 4. Start the application using `yarn start`. You should now be connected to MongoDB.
-5. Go to postman and get the collection set up by selecting "covertree-code-mt.postman_collection.json" from the repository.
-6. You are now all set to explore the application.
+5. Download and Install postman
+6. Go to postman and get the collection set up by selecting "covertree-code-mt.postman_collection.json" from the repository.
+7. You are now all set to explore the application.
 
 
 ## Usage
