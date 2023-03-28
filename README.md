@@ -31,6 +31,16 @@ To use the Rest API, follow these steps:
 1. Open postman and use `http://localhost:8000/employee`.
 2. Diffrent APIs exposed with this applications are:
     - Add employee: http://localhost:8000/employee (POST)
+      Sample request body to add employee:
+      `{
+      "firstname": "Florence",
+      "lastname": "Preston",
+      "doj": "2001-10-30T18:30:00.000Z",
+      "dob": "1974-12-11T00:00:00.000Z",
+      "salary": 1700000,
+      "title": "SDE Manager",
+      "department": "Product Dev"
+       }`
     - Get employees: http://localhost:8000/employee (GET)
     - Get employees - sorted data: http://localhost:8000/employee?sort=salary (GET) 
         - Value of the sort should be a valid column name
