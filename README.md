@@ -30,7 +30,7 @@ To install Covertree-Code-MT, follow these steps:
 To use the Rest API, follow these steps:
 
 1. Open postman and use `http://localhost:8000/employee`.
-2. Diffrent APIs exposed with this applications are:
+2. Different APIs exposed with this application are:
     - Add employee: http://localhost:8000/employee (POST)
  
       Sample request body to add employee:
